@@ -1,0 +1,8 @@
+#
+# Deepak Shenoy
+#
+# Dec 31, 2025
+#
+**/cmake-build-debug/
+**/.idea
+**/.DS_Store
