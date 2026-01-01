@@ -17,6 +17,10 @@ The following is a graph of traffic from January 2012 until December 2025.
 
 ![01-passenger-input-data.png](.artifacts/docs/img/01-passenger-input-data.png)
 
+There is a [stationary pattern](https://en.wikipedia.org/wiki/Stationary_process) with
+the data except during the [Covid-19 pandemic](https://en.wikipedia.org/wiki/Impact_of_the_COVID-19_pandemic_on_commercial_air_transport)
+but nevertheless, the pattern continues.
+
 
 ## References
 <a id="1">[1]</a> Atlanta Hartsfield-Jackson Airport https://en.wikipedia.org/wiki/Hartsfield%E2%80%93Jackson_Atlanta_International_Airport <br>
@@ -26,5 +30,7 @@ https://docs.pytorch.org/tutorials/advanced/cpp_frontend.html <br>
 A stable limited LibTorch. https://www.youtube.com/watch?v=HNdEmnvMvGE <br>
 <a id="1">[4]</a>
 Plotting data with c++. See book reference using this [link](https://www.oreilly.com/library/view/hands-on-machine-learning/9781789955330/2685f7fa-8d76-4b26-bd6c-53b9e2bae133.xhtml). Code repository: https://github.com/Kolkir/plotcpp/blob/master/plot.h<br>
+<a id="1">[5]</a>
+Impact of the COVID-19 pandemic on commercial air transport. https://en.wikipedia.org/wiki/Impact_of_the_COVID-19_pandemic_on_commercial_air_transport
 
 
