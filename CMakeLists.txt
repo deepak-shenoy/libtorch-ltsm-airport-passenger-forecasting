@@ -21,5 +21,6 @@ find_package(Torch REQUIRED)
 include_directories(${PLOTCPP_PATH})
 include_directories(SYSTEM ${TORCH_INCLUDE_DIRS})
 
-add_executable(airport-passenger-forecasting main.cpp)
+add_executable(airport-passenger-forecasting main.cpp
+        utils/DataManager.h)
 target_link_libraries(airport-passenger-forecasting ${TORCH_LIBRARIES})

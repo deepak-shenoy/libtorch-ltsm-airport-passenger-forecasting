@@ -16,6 +16,7 @@
 #include <plot.h>
 
 #include "utils/DebugTimer.h"
+#include "utils/DataManager.h"
 
 int main() {
     DebugTimer timer;
