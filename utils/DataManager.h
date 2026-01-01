@@ -24,7 +24,7 @@ namespace datamgr {
             std::vector<int> month;
             std::vector<double> count;
             std::string line;
-            std::size_t line_size = 0, start_of_delimeter = 0, end_of_delimeter = 0;
+            std::size_t line_size = 0, start_of_delimiter = 0, end_of_delimiter = 0;
 
             DebugTimer timer;
             timer.start();
@@ -34,21 +34,21 @@ namespace datamgr {
             while(!file_ptr.eof()) {
                 std::getline(file_ptr, line);
 
-                start_of_delimeter = line.find('-');
-                if (start_of_delimeter == 0 || start_of_delimeter == std::string::npos) {
+                start_of_delimiter = line.find('-');
+                if (start_of_delimiter == 0 || start_of_delimiter == std::string::npos) {
                     printf("Bad line %s\n", line.c_str());
                     continue;
                 }
 
-                end_of_delimeter = line.find(',', start_of_delimeter);
-                if (end_of_delimeter == std::string::npos) {
-                    std::cout << "Bad line2: " << line << " Position " << end_of_delimeter << std::endl;
+                end_of_delimiter = line.find(',', start_of_delimiter);
+                if (end_of_delimiter == std::string::npos) {
+                    std::cout << "Bad line2: " << line << " Position " << end_of_delimiter << std::endl;
                     continue;
                 }
 
-                std::string year_raw = line.substr(0, start_of_delimeter);
-                std::string month_raw = line.substr(start_of_delimeter + 1, 2);
-                std::string count_raw = line.substr(end_of_delimeter + 1);
+                std::string year_raw = line.substr(0, start_of_delimiter);
+                std::string month_raw = line.substr(start_of_delimiter + 1, 2);
+                std::string count_raw = line.substr(end_of_delimiter + 1);
 
                 year.push_back(std::stoi(year_raw));
                 month.push_back(std::stoi(month_raw));
