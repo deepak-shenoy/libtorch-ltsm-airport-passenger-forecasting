@@ -70,7 +70,7 @@ int main() {
     torch::nn::MSELoss loss_fn;
 
     // Training
-    int n_epochs = 8000;
+    int n_epochs = 2000;
     for (int epoch = 0; epoch < n_epochs; ++epoch) {
         passenger_model->train(true);
         for (auto &batch : *data_loader) {
@@ -116,10 +116,8 @@ int main() {
     for (int i = 0; i < end_1 - start_1; i ++) {
         // TODO - Use an assessor
         for (int j = 0 ; j < 1; j++) {
-            // std::cout << y_pred_test[i][j][0] << " ";
             y_vals.push_back(y_pred_test[i][0][0].item<float>());
         }
-        std::cout << std::endl;
     }
 
     plotter.draw_plot(OUTPUT_02,
