@@ -22,17 +22,19 @@ the data except during the [Covid-19 pandemic](https://en.wikipedia.org/wiki/Imp
 but nevertheless, the pattern continues.
 
 ## Forecast
-The following is a forecast using the training data.
+The following is a forecast using the training data:
 
 ### Learning Rate 0.001
 
-![02-forecast-only.png](.artifacts/docs/img/02-forecast-only.png)
+![02-forecast-only-learning-0-001.png](.artifacts/docs/img/02-forecast-only-learning-0-001.png)
 
 ### Learning Rate 0.05
 
-![02-forecast-only-learning-0-02.png](.artifacts/docs/img/02-forecast-only-learning-0-02.png)
+![02-forecast-only-learning-0-05.png](.artifacts/docs/img/02-forecast-only-learning-0-05.png)
 
-![02-forecast-only.png](.artifacts/docs/img/02-forecast-only.png)
+### Learning Rate 0.01
+
+![02-forecast-only-learning-0-01.png](.artifacts/docs/img/02-forecast-only-learning-0-01.png)
 
 ## References
 <a id="1">[1]</a> Atlanta Hartsfield-Jackson Airport https://en.wikipedia.org/wiki/Hartsfield%E2%80%93Jackson_Atlanta_International_Airport <br>
