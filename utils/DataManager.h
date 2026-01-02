@@ -14,15 +14,15 @@
 struct record {
     std::vector<int> year;
     std::vector<int> month;
-    std::vector<double> count;
+    std::vector<float> count;
 };
 
-class DataManager {
+struct DataManager {
 public:
     record read_file(std::string filename) {
         std::vector<int> year;
         std::vector<int> month;
-        std::vector<double> count;
+        std::vector<float> count;
         std::string line;
         std::size_t line_size = 0, start_of_delimiter = 0, end_of_delimiter = 0;
 

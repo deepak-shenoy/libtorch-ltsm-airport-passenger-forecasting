@@ -14,7 +14,7 @@ public:
         std::string x_axis_description,
         std::string y_axis_description,
         std::string y_line_description,
-        std::vector<float> x, std::vector<float> x) {
+        std::vector<float> x, std::vector<float> y) {
         plotcpp::Plot plt{};
         plt.SetTerminal("png");
         plt.SetOutput(output_file);
@@ -23,14 +23,9 @@ public:
         plt.SetYLabel(y_axis_description);
         plt.SetAutoscale();
         plt.GnuplotCommand("set grid");
-
-        std::vector<float> x;
-        for (int i = 0; i < raw_data.count.size(); i ++) x.push_back(i);
-
-        plt.Draw2D(plotcpp::Lines(x.begin(), x.end(), raw_data.count.begin(), y_line_description),
-                 plotcpp::Points(x.begin(), x.end(), raw_data.count.begin(), ""));
+        plt.Draw2D(plotcpp::Lines(x.begin(), x.end(), y.begin(), y_line_description),
+                 plotcpp::Points(x.begin(), x.end(), y.begin(), ""));
     }
-
 };
 
 

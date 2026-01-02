@@ -7,7 +7,7 @@
 
 #include <torch/torch.h>
 
-class PassengerModel : torch::nn::Module {
+class PassengerModel : public torch::nn::Module {
 public:
     torch::nn::LSTM lstm;
     torch::nn::Linear linear;
