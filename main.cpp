@@ -66,11 +66,11 @@ int main() {
 
     // Model infrastructure
     auto passenger_model = std::make_shared<PassengerModel>();
-    torch::optim::Adam optimizer(passenger_model->parameters(), torch::optim::AdamOptions(0.001)); // Learning rate 0.001 is standard default
+    torch::optim::Adam optimizer(passenger_model->parameters(), torch::optim::AdamOptions(0.01)); // Learning rate 0.001 is standard default
     torch::nn::MSELoss loss_fn;
 
     // Training
-    int n_epochs = 2000;
+    int n_epochs = 10000;
     for (int epoch = 0; epoch < n_epochs; ++epoch) {
         passenger_model->train(true);
         for (auto &batch : *data_loader) {
@@ -85,7 +85,7 @@ int main() {
         }
 
         // Validation
-        if (epoch % 500 != 0) continue;
+        if (epoch % 1000 != 0) continue;
         passenger_model->eval();
         torch::NoGradGuard no_grad;
 
